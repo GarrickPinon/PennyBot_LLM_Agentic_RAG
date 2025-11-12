@@ -280,9 +280,6 @@ docker run -it --env-file .env pennybot
   ```bash
   docker run --gpus all -it --env-file .env pennybot
   ```
-```
-
----
 
 
 ---
