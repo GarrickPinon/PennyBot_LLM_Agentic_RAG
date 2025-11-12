@@ -2,7 +2,7 @@
 ---
 
 
-#PennyBot_LLM_Agentic_RAG
+# PennyBot_LLM_Agentic_RAG
 
 **PennyBot reborn as an LLM‑Agentic RAG Chatbot**  
 Dockerized, CUDA‑accelerated, TTFT tracked, hallucination taxonomy logged, and orchestrated end‑to‑end with sustainable low‑token, low‑energy retrieval.
