@@ -9,14 +9,14 @@ Dockerized, CUDA‑accelerated, TTFT tracked, hallucination taxonomy logged, and
 
 ---
 
-📘 Part I. Mathematical Foundations (Textbook Mode)
+# 📘 Part I. Mathematical Foundations (Textbook Mode)
 
 
 ---
 
-## 📐 Mathematical Foundations
+# 📐 Mathematical Foundations
 
-### 1. Document Chunking
+## 1. Document Chunking
 
 Let \( D = \{d₁, d₂, \dots, dₙ\} \) be a dataset of documents. Each document \( dᵢ \) is segmented into smaller textual chunks \( cᵢⱼ \), forming a new collection:
 
@@ -24,7 +24,7 @@ Let \( D = \{d₁, d₂, \dots, dₙ\} \) be a dataset of documents. Each docume
 
 ---
 
-### 2. Embedding Function
+## 2. Embedding Function
 
 Each chunk \( c \in C \) is mapped into a high-dimensional vector space via an embedding function \( f \):
 
@@ -32,7 +32,7 @@ Each chunk \( c \in C \) is mapped into a high-dimensional vector space via an e
 
 ---
 
-### 3. Vector Store Construction
+## 3. Vector Store Construction
 
 All chunk embeddings are stored in a FAISS index:
 
@@ -44,7 +44,7 @@ Similarity between a query vector \( q \) and a chunk vector \( v_c \) is comput
 
 ---
 
-### 4. Retrieval
+## 4. Retrieval
 
 Given a user query \( q \), we first embed it:
 
@@ -56,7 +56,7 @@ We then retrieve the top‑k most similar chunks:
 
 ---
 
-### 5. Augmented Generation
+## 5. Augmented Generation
 
 The retrieved chunks \( R(q) \) are concatenated with the query and passed to the language model:
 
@@ -70,7 +70,7 @@ Here, ⊕ denotes the concatenation of the query and its retrieved context.
 📐 **Prompt Engineering Math**
 
 
-### Weighted Context Fusion
+## Weighted Context Fusion
 
 
 \[
@@ -129,29 +129,6 @@ H(x) =
 \]
 
 
-
-
----
-
-## Part II. Codebook Translation (Developer Manual)
-
-### 1. Environment Setup
-```bash
-pip install langchain==0.3.7 langchain-community==0.3.7 \
-            langchain-openai==0.3.7 langchain-together==0.3.7 \
-            faiss-cpu python-dotenv pandas datasets scikit-learn tqdm PyYAML streamlit
-```
-
----
-
-### 2. `.env` File
-```dotenv
-OPENAI_API_KEY=your_openai_key
-TOGETHER_API_KEY=your_together_key
-EMBEDDING_PROVIDER=openai
-```
-
----
 ---
 
 
