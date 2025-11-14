@@ -252,35 +252,6 @@ PennyBot’s resurrection is not just a chatbot. It is:
 - A **mathematical textbook** (Part I) and **developer codebook** (Part II).  
 - A **fellowship artifact**: every eval request stamped with time, tokens, hallucination taxonomy, and reproducibility.
 
----
-
-# 🐳 Docker Instructions
-
-```markdown
-##  Docker Setup
-
-PennyBot ships with a `Dockerfile` for reproducible builds.
-
-### 1. Build the image
-```bash
-docker build -t pennybot .
-```
-
-### 2. Run the container
-```bash
-docker run -it --env-file .env pennybot
-```
-
-### 3. Notes
-- Mount volumes if you want to persist datasets:
-  ```bash
-  docker run -it -v $(pwd)/datasets:/app/datasets --env-file .env pennybot
-  ```
-- CUDA acceleration requires NVIDIA drivers + `nvidia-docker2`:
-  ```bash
-  docker run --gpus all -it --env-file .env pennybot
-  ```
-
 
 ---
 
