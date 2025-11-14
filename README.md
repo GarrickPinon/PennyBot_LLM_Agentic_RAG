@@ -259,15 +259,15 @@ PennyBot’s resurrection is not just a chatbot. It is:
 
 This project runs a RAG evaluation pipeline using a Together model and a Pinecone vector store.
 
-##Setup & Installation
+## Setup & Installation
 
-###Clone the Repository
+### Clone the Repository
 ```
 git clone [your-repo-url]
 cd [your-repo-name]
 ```
 
-###Create a Virtual Environment
+### Create a Virtual Environment
 This project is tested and locked to Python 3.11.
 
 ### Create the environment
@@ -276,7 +276,7 @@ python3.11 -m venv venv
 ### Activate it
 ### On Windows:
 .\venv\Scripts\Activate
-#### On Mac/Linux:
+### On Mac/Linux:
 source venv/bin/activate
 
 
