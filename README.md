@@ -255,6 +255,60 @@ PennyBot’s resurrection is not just a chatbot. It is:
 
 ---
 
+Agentic RAG Evaluation Harness
+
+This project runs a RAG evaluation pipeline using a Together model and a Pinecone vector store.
+
+Setup & Installation
+
+Clone the Repository
+```
+git clone [your-repo-url]
+cd [your-repo-name]
+```
+
+Create a Virtual Environment
+This project is tested and locked to Python 3.11.
+
+# Create the environment
+python3.11 -m venv venv
+
+# Activate it
+# On Windows:
+.\venv\Scripts\Activate
+# On Mac/Linux:
+# source venv/bin/activate
+
+
+Install Dependencies
+This will install the exact working list of packages.
+```
+pip install -r requirements.txt
+```
+
+Set Environment Variables
+Create a .env file in the root of the project and add your API keys:
+```
+TOGETHER_API_KEY="your_together_api_key"
+PINECONE_API_KEY="your_pinecone_api_key"
+```
+
+How to Run the Evaluation
+
+Seed your Database
+If your Pinecone index is empty, run the seed_from_jsonl.py script (or whichever seeding script you used).
+
+Run the Evaluation Script
+The following command will run the evaluation against the all_questions_tagged.csv test set and save the results to results.csv.
+
+python run_eval.py --test all_questions_tagged.csv --out results.csv --max_samples 500
+
+
+Check Your Results
+The script will print a final summary to the console, and a detailed, row-by-row log will be saved in results.csv.
+
+---
+
 # 📚 References
 
 ## Core Frameworks
